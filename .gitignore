@@ -1,0 +1,5 @@
+.vscode
+myvenv/bin
+myvenv/lib
+myvenv/include
+*.pvc
