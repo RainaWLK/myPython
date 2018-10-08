@@ -1,5 +1,2 @@
 .vscode
-myvenv/bin
-myvenv/lib
-myvenv/include
-*.pvc
+__pycache__

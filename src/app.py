@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 
 page = request.get_web_page('https://www.ptt.cc/bbs/Beauty/index.html')
 
-
-
-
 def get_articles(dom, date):
   articles = []
   soup = BeautifulSoup(dom, 'html.parser')
@@ -35,7 +32,7 @@ def get_articles(dom, date):
 
 
 
-articles = get_articles(page, '10/05')
+articles = get_articles(page, '10/08')
 for article in articles:
   print(article)
   print(end='\n')
