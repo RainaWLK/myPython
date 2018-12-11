@@ -7,3 +7,5 @@ python-dateutil
 pytz
 requests
 six
+paho-mqtt
+redis

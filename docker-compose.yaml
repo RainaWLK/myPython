@@ -4,7 +4,19 @@ services:
     build: .
     command: python app.py
     volumes:
-      - ./src:/usr/src/app
+      - ./ptt:/usr/src/app
+  mqtt:
+    build: .
+    command: python app.py
+    volumes:
+      - ./mqtt:/usr/src/app
+      - ./cert:/usr/src/cert
+  redis:
+    build: .
+    command: python app.py
+    volumes:
+      - ./myRedis:/usr/src/app
+      - ./cert:/usr/src/cert
 #  web:
 #    build: .
 #    command: gunicorn -b 0.0.0.0:8000 todosapp.wsgi:application
