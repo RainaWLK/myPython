@@ -17,6 +17,15 @@ services:
     volumes:
       - ./myRedis:/usr/src/app
       - ./cert:/usr/src/cert
+  vault:
+    build: .
+    command: python app.py
+    environment:
+      VAULT_ADDR: https://<my_vault_url>
+      VAULT_ROLE: admin
+    volumes:
+      - ./vault:/usr/src/app
+      - ~/.aws:/root/.aws
 #  web:
 #    build: .
 #    command: gunicorn -b 0.0.0.0:8000 todosapp.wsgi:application

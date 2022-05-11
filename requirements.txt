@@ -9,3 +9,7 @@ requests
 six
 paho-mqtt
 redis
+
+kubernetes
+hvac
+boto3
